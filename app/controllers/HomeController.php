@@ -15,11 +15,6 @@ class HomeController extends BaseController {
 	|
 	*/
 
-	// public function showWelcome()
-	// {
-	// 	return View::make('hello');
-	// }
-
 	public function getIndex()
 	{
 		return View::make('home')
@@ -56,6 +51,10 @@ class HomeController extends BaseController {
 			->with('title', 'Contacts');
 	}	
 
-
+	public function getLogin()
+	{
+		return View::make("contacts")
+			->with('title', 'Login');
+	}	
 
 }

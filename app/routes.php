@@ -16,4 +16,9 @@
 // 	return View::make('hello');
 // });
 
+
+Route::group(array('prefix' => 'guest' , 'before' => 'guest'),function(){
+	Route::controller('/', 'AlumniController');
+});
+
 Route::controller('/', 'HomeController');
