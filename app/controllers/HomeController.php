@@ -15,9 +15,47 @@ class HomeController extends BaseController {
 	|
 	*/
 
-	public function showWelcome()
+	// public function showWelcome()
+	// {
+	// 	return View::make('hello');
+	// }
+
+	public function getIndex()
 	{
-		return View::make('hello');
+		return View::make('home')
+			->with('title', 'Home');
 	}
+
+	public function getAbout()
+	{
+		return View::make("about")
+			->with('title', 'About');
+	}
+
+	public function getAlumni()
+	{
+		return View::make("alumni")
+			->with('title', 'Alumni');
+	}
+
+	public function getAnnouncements()
+	{
+		return View::make("announcements")
+			->with('title', 'Announcements');
+	}
+
+	public function getSchoolCalendar()
+	{
+		return View::make("school-calendar")
+			->with('title', 'School Calendar');
+	}
+
+	public function getContacts()
+	{
+		return View::make("contacts")
+			->with('title', 'Contacts');
+	}	
+
+
 
 }
