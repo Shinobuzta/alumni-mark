@@ -56,6 +56,12 @@ class HomeController extends BaseController {
 			->with('title', 'Contacts');
 	}	
 
+	public function getLogin()
+	{
+		return View::make("login")
+			->with('title', 'Login');
+	}	
+
 
 
 }
