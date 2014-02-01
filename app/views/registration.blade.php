@@ -26,80 +26,103 @@
 	
 	<body class="bg-cyan">
 		<div class="body body-s">		
-			<form action="{{ URL::to('guest/create') }}" id="sky-form" class="sky-form" method="post" />
+			<form action="{{ URL::to('guest/create') }}" id="sky-form" 
+				  class="sky-form" method="post" />
 				<header>Registration form</header>
-				
-				<fieldset>					
+				@if($errors->has())
+				<fieldset>
+					<div class="alert alert-danger alert-dismissable">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif					
 					<section>
 						<label class="input">
 							<i class="icon-append icon-user"></i>
-							<input type="text" name="studentid" placeholder="Student ID" />
-							<b class="tooltip tooltip-bottom-right">Needed to enter the website</b>
+							<input type="text" name="studentid" 
+								   placeholder="Student ID" />
+							<b class="tooltip tooltip-bottom-right">
+							Needed to enter the website</b>
 						</label>
 					</section>
 					
 					<section>
 						<label class="input">
 							<i class="icon-append icon-user"></i>
-							<input type="text" name="username" placeholder="Username" />							
+							<input type="text" name="username" 
+								   placeholder="Username" />							
 						</label>
 					</section>
 					<section>
 						<label class="input">
 							<i class="icon-append icon-user"></i>
-							<input type="text" name="address" placeholder="Address" />							
-						</label>
-					</section>
-					
-					<section>
-						<label class="input">
-							<i class="icon-append icon-user"></i>
-							<input type="text" name="contact" placeholder="Contact Number" />							
+							<input type="text" name="address" 
+								   placeholder="Address" />							
 						</label>
 					</section>
 					
 					<section>
 						<label class="input">
 							<i class="icon-append icon-user"></i>
-							<input type="text" name="course" placeholder="Course" />
+							<input type="text" name="contact" 
+								   placeholder="Contact Number" />							
 						</label>
 					</section>
 					
 					<section>
 						<label class="input">
 							<i class="icon-append icon-user"></i>
-							<input type="text" name="batch" placeholder="Batch Year" />							
+							<input type="text" name="course" 
+								   placeholder="Course" />
 						</label>
 					</section>
 					
 					<section>
 						<label class="input">
 							<i class="icon-append icon-user"></i>
-							<input type="text" name="birthday" placeholder="Birthday" />							
+							<input type="text" name="batch" 
+								   placeholder="Batch Year" />							
+						</label>
+					</section>
+					
+					<section>
+						<label class="input">
+							<i class="icon-append icon-user"></i>
+							<input type="text" name="birthday" 
+								   placeholder="Birthday" />							
 						</label>
 					</section>
 					
 					<section>
 						<label class="input">
 							<i class="icon-append icon-envelope-alt"></i>
-							<input type="email" name="email" placeholder="Email address" />
-							<b class="tooltip tooltip-bottom-right">Needed to verify your account</b>
+							<input type="email" name="email" 
+								   placeholder="Email address" />
+							<b class="tooltip tooltip-bottom-right">
+							Needed to verify your account</b>
 						</label>
 					</section>
 					
 					<section>
 						<label class="input">
 							<i class="icon-append icon-lock"></i>
-							<input type="password" name="password" placeholder="Password" id="password" />
-							<b class="tooltip tooltip-bottom-right">Don't forget your password</b>
+							<input type="password" name="password" 
+								   placeholder="Password" id="password" />
+							<b class="tooltip tooltip-bottom-right">
+							Don't forget your password</b>
 						</label>
 					</section>
 					
 					<section>
 						<label class="input">
 							<i class="icon-append icon-lock"></i>
-							<input type="password" name="passwordConfirm" placeholder="Confirm password" />
-							<b class="tooltip tooltip-bottom-right">Confirm your password</b>
+							<input type="password" name="passwordConfirm" 
+								   placeholder="Confirm password" />
+							<b class="tooltip tooltip-bottom-right">
+							Confirm your password</b>
 						</label>
 					</section>
 				</fieldset>
@@ -108,17 +131,20 @@
 					<div class="row">
 						<section class="col col-6">
 							<label class="input">
-								<input type="text" name="firstname" placeholder="First name" />
+								<input type="text" name="firstname" 
+									   placeholder="First name" />
 							</label>
 						</section>
 						<section class="col col-6">
 							<label class="input">
-								<input type="text" name="middlename" placeholder="Middle name" />
+								<input type="text" name="middlename" 
+									   placeholder="Middle name" />
 							</label>
 						</section>
 						<section class="col col-6">
 							<label class="input">
-								<input type="text" name="lastname" placeholder="Last name" />
+								<input type="text" name="lastname" 
+								       placeholder="Last name" />
 							</label>
 						</section>
 					</div>
@@ -126,7 +152,8 @@
 					<section>
 						<label class="select">
 							<select name="gender">
-								<option value="0" selected="" disabled="" />Gender
+								<option value="0" selected="" 
+									    disabled="" />Gender
 								<option value="1" />Male
 								<option value="2" />Female
 								<option value="3" />Other
@@ -136,8 +163,15 @@
 					</section>
 					
 					<section>
-						<label class="checkbox"><input type="checkbox" name="subscription" id="subscription" /><i></i>I want to receive news and  special offers</label>
-						<label class="checkbox"><input type="checkbox" name="terms" id="terms" /><i></i>I agree with the Terms and Conditions</label>
+						<label class="checkbox"><input type="checkbox" 
+							   name="subscription" id="subscription" />
+							   <i></i>
+							   I want to receive news and  special offers
+					    </label>
+						<label class="checkbox">
+							<input type="checkbox" name="terms" id="terms" />
+							<i></i>I agree with the Terms and Conditions
+						</label>
 					</section>
 				</fieldset>
 				<footer>

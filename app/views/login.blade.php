@@ -26,6 +26,7 @@
 	<body class="bg-cyan">
 		<div class="body body-s">		
 			<form action="" id="sky-form" class="sky-form" />
+				
 				<header>Login form</header>
 				
 				<fieldset>					
@@ -67,6 +68,7 @@
 					<button type="submit" class="button">Log in</button>
 					<a href="#" class="button button-secondary">Register</a>
 				</footer>
+			
 			</form>			
 		</div>
 		
