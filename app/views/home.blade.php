@@ -38,7 +38,7 @@
                             <a href="login2.html">
                                 <image src="assets/images/login.png">
                             </a>
-                            <a href="register.html">
+                            <a href="{{ URL::to('/') }}/guest/new">
                                 <image src="assets/images/signup.png">
                         </form>
                     </div>

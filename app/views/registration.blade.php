@@ -29,8 +29,8 @@
 			<form action="{{ URL::to('guest/create') }}" id="sky-form" 
 				  class="sky-form" method="post" />
 				<header>Registration form</header>
-				@if($errors->has())
 				<fieldset>
+				@if($errors->has())
 					<div class="alert alert-danger alert-dismissable">
                         <ul>
                             @foreach ($errors->all() as $error)

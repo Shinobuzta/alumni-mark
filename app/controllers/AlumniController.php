@@ -9,7 +9,8 @@ class AlumniController extends BaseController {
 
 	public function getNew()
 	{
-        return View::make('registration')->with("alumnis", Alumni::get());
+        return View::make('registration')
+        	->with("alumnis", Alumni::get());
 	}
 
 	public function postCreate()
@@ -33,7 +34,9 @@ class AlumniController extends BaseController {
         
         $validation = Validator::make($input,$rules);
         if($validation->fails()){
-        	return "Error";
+			return View::make('registration')
+        		->withErrors($validation)
+        		->with("alumnis", Alumni::get());
         }else{
         	$user = User::create(array(
         			'username'	=>	Input::get('username'),
