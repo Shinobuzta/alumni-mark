@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>UMAK-CCS Alumni Tracking System</title>
+        <title>{{ $title }} | UMAK-CCS Alumni Tracking System</title>
         <meta charset="UTF-8" />
         <link rel="stylesheet" type="text/css" href="assets/styles/style.css" />
     </head>
